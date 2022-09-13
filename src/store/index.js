@@ -1,27 +1,27 @@
 import Vue from 'vue'
-import Vuex from 'Vuex'
+import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        token: 100
+        token: 100,
+        test: 'content'
     },
     mutations: {
-        UPDATE_TOKEN(state, value) {
-            state.numbers = value
+        TEST(state, status) {      //status -> payload （載荷）
+            state.test = status;
         }
     },
     actions: {
-        set_token(context, number) {
-            context.commit("UPDATE_TOKEN", number)
+        updateTest(context, status) {
+            context.commit('TEST', status)     // mutation 中定義方法
         }
     },
     modules: {
+
     },
     getters: {
-        GetToken: state => {
-            return state.token
-        },
+
     }
 })
