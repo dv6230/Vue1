@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h3 class="mb-3">測試 asp net core AES 解密 與 JS 加密</h3>
     <div class="w-100">
       content : {{ message }}
     </div>
@@ -40,7 +41,7 @@ export default {
     fetchapi.fetchPostApi('api/test/GetApi', {})
       .then(result => {
         this.message = result.data
-      })
+      }).catch(error => { alert(error) } )
   },
   methods: {
     click() {
