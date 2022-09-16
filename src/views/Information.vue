@@ -1,12 +1,20 @@
-<template lang="">
-    <div id="info">
+<template>
+    <div id="info" class="container">
         <h3 class="mb-3">Vuex 測試</h3>
-        <div class="d-flex justify-content-center">
-            <div class="col-md-5">
-            <p>輸入參數 : {{ store1 }}</p>
-            <input type="text" class="form-control mb-3" v-model="store1" >
-            <button class="btn btn-primary">送出</button>
+        <div class="">
+            <p>Vuex1 儲存參數 : {{ vuex1 }}</p>
+            <p>Vuex2 儲存參數 : {{ vuex2 }}</p>
         </div>
+        <div class="d-flex flex-row">
+            <div class="col-4 p-3 d-flex align-items-center justify-content-end">
+                <label class="form-label m-0">Vuex1 參數</label>
+            </div>
+            <div class="col-4 p-3">
+                <input type="text" class="form-control" v-model="data1">
+            </div>
+            <div class="col-4 p-3 d-flex justify-content-start">
+                <button class="btn btn-primary" @click="click()">送出</button>
+            </div>
         </div>
     </div>
 </template>
@@ -18,12 +26,26 @@ export default {
     },
     data() {
         return {
-            store1: ''
+            vuex1: this.$store.state.value1,
+            vuex2: this.$store.state.value2,
+            data1: '',
+            data2: ''
         }
     },
     methods: {
-
+        click() {
+            this.$store.dispatch("updateValue1",this.data1)
+            this.vuex1 = this.$store.state.value1
+        },
+        updateValue(){
+            
+        }
     },
+    watch: {
+        data1: function(){
+            
+        }
+    }
 }
 </script>
 <style lang="">

@@ -23,7 +23,6 @@
 
 <script>
 import * as fetchapi from '../js/FetchAPI'
-import CryptoJS from 'crypto-js'
 
 export default {
   name: 'HomeView',
