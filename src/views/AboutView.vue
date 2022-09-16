@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h3 class="mb-3">測試呼叫 API 與 cookie 實驗</h3>
+    <h3 class="mb-3">測試呼叫 API 與 cookie</h3>
     <div class="row col-12 d-flex justify-content-center mh m-0">
       <div class="border col-4 d-flex align-items-center justify-content-center">
         <p class=" m-0">{{ result.status }}</p>
