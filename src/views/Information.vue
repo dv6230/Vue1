@@ -3,7 +3,6 @@
         <h3 class="mb-3">Vuex 測試</h3>
         <div class="">
             <p>Vuex1 儲存參數 : {{ vuex1 }}</p>
-            <p>Vuex2 儲存參數 : {{ vuex2 }}</p>
         </div>
         <div class="d-flex flex-row">
             <div class="col-4 p-3 d-flex align-items-center justify-content-end">
@@ -34,16 +33,20 @@ export default {
     },
     methods: {
         click() {
-            this.$store.dispatch("updateValue1",this.data1)
+            if (this.data1.length <= 0) {
+                return;
+            }
+            this.$store.dispatch("updateValue1", parseInt(this.data1))
             this.vuex1 = this.$store.state.value1
+            this.data1 = ''
         },
-        updateValue(){
-            
+        updateValue() {
+
         }
     },
     watch: {
-        data1: function(){
-            
+        data1: function () {
+            this.data1 = this.data1.replace(/[^\d]/g, '');
         }
     }
 }

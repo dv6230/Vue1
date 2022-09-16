@@ -34,7 +34,8 @@ export default {
   },
   methods: {
     click() {
-      fetchapi.fetchPostApi('api/test/GetCookie/cookie', {}).then(r => this.result = r).catch(() => { alert('連線失敗') } )
+      fetchapi.fetchPostApi('api/test/GetCookie/cookie', {}).then(r => this.result = r)
+      // .catch(() => { alert('連線失敗') } )
     },
     clearCookie() {
       console.log('clear');

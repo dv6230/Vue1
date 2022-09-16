@@ -40,7 +40,7 @@ export default {
     fetchapi.fetchPostApi('api/test/GetApi', {})
       .then(result => {
         this.message = result.data
-      }).catch(error => { alert(error) } )
+      })/*.catch(error => { alert(error) } )*/
   },
   methods: {
     click() {

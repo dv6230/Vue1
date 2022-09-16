@@ -3,6 +3,6 @@ export default {
         state.test = data;
     },
     EditValue1 : function(state,data){
-        state.value1 = data
+        state.value1.push(data)
     }
 }
