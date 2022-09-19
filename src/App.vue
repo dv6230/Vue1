@@ -4,7 +4,9 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/information">Information</router-link> |
-      <router-link to="/prop">Component</router-link>
+      <router-link to="/prop">Component</router-link> |
+      <router-link to="/router1">Router 1</router-link> |
+      <router-link to="/router2">Router 2</router-link>
     </nav>
     <router-view />
   </div>

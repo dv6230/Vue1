@@ -19,7 +19,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   { path: '/information', name: 'information', component: () => import('../views/Information.vue') },
-  { path: '/prop', name: 'prop', component: () => import('../views/PropView.vue') }
+  { path: '/prop', name: 'prop', component: () => import('../views/PropView.vue') },
+  { path: '/router1/:productId', name: 'router1', component: () => import('../views/RouterView1.vue') },
+  { path: '/router2', name: 'router2', component: () => import('../views/RouterView2.vue') },
 ]
 
 const router = new VueRouter({

@@ -14,7 +14,7 @@
             <div class="col-4 p-3 d-flex justify-content-start">
                 <button class="btn btn-primary" @click="click()">送出</button>
             </div>
-        </div>
+        </div>        
     </div>
 </template>
 <script>

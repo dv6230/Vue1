@@ -7,10 +7,12 @@
             <div class="col-3 p-2">選項</div>
         </div>
         <div class="w-100 h-0 border-dark border-bottom"></div>
-        <Info-Item v-for="(item,index) in lists" :key="index" v-bind:name="item.name" v-bind:price="item.price"
-            v-bind:amount="item.amount" @updated-value="update($event,index)">
-        </Info-Item>
-        <div class="row d-flex justify-content-start">
+        <div v-for="(item,index) in lists" :key="index">
+            <Info-Item v-bind:name="item.name" v-bind:price="item.price" v-bind:amount="item.amount"
+                v-bind:product="item" v-bind:index="index" @updated-value="update($event,index)">
+            </Info-Item>
+        </div>
+        <div class="row d-flex justify-content-start m-3">
             <h2>價格總和 {{ CountTotal() }}</h2>
         </div>
     </div>

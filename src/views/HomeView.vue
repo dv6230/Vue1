@@ -49,16 +49,7 @@ export default {
     },
     updateContent() {
       this.vuexContent = this.$store.state.test
-
-      // const CryptoJS = require('crypto-js')
-      // const secretKey = 'ThisIsMyKey'
-      // const ciphertext = CryptoJS.AES.encrypt(this.vuexContent, secretKey).toString()
-      // this.encode = ciphertext
-      // const originalText = CryptoJS.AES.decrypt(ciphertext, secretKey).toString(CryptoJS.enc.Utf8)
-      // this.decode = originalText
-
       fetchapi.loginAPI(this.vuexContent).then(result => this.decode = result)
-
     }
   }
 };
