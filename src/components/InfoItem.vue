@@ -4,8 +4,8 @@
         <div class="col-3">{{ price }}</div>
         <div class="col-3">{{ producAmount }}</div>
         <div class="col-3">
-            <button class="btn btn-primary mx-2" @click="addClick()">增加</button>
-            <button class="btn btn-primary " @click="addClick()">減少</button>
+            <button class="btn btn-primary mx-2" v-on:click="CountClick(1)">增加</button>
+            <button class="btn btn-primary " v-on:click="CountClick(-1)">減少</button>
         </div>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     props: {
         name: String,
         price: Number,
-        amount: Number,
+        amount: Number
     },
     data() {
         return {
@@ -24,7 +24,7 @@ export default {
         }
     },
     created() {
-        if(this.amount){
+        if (this.amount) {
             this.producAmount = this.amount
         }
     },
@@ -33,9 +33,9 @@ export default {
             this.producAmount = this.amount
         }
     },
-    function: {
-        addClick() {
-            this.$emit('updated-value',1)
+    methods: {
+        CountClick(val) {
+            this.$emit('updated-value', val)
         }
     }
 }
