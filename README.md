@@ -1,5 +1,7 @@
 # vue1
 
+Vue 練習專案
+
 ## Project setup
 ```
 npm install
